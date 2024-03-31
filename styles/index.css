@@ -1,0 +1,276 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Global Styles*/
+
+.h1{
+    font-family: Rubik;
+    font-size: 25px;
+    color: var(--TextColorML);
+    font-weight: 800;
+}
+.p{
+    font-family: Rubik;
+    color: var(--TextColorML);
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+/*Global variable*/
+:root{
+    /*Mode Light*/
+    --BackGroundColorHeaderML:#f0d8d8a0;
+    --BorderColorHeaderML:#d59494;
+
+    --BackGroundColorFooterML:#f0d8d8a0;
+    --BorderColorFooterML:#d59494;
+
+    --BorderColorSectionsML:#ac5656;
+    --BackgroundColorSectionsML:#fbf5f5d6;
+
+    --BorderColorSmallSectionsML:#904545;
+    --BackGroundColorSmallSectionsML:#ffffff;
+    --BackGroundColorMediumSectionsML:#83454429;
+
+    --BackgroundColorSectionSVGML:#fff;
+    --BorderColorSectionSVGML:#ac5656;
+
+    --ColorFillIconsML:#361919;
+
+    --TextColorML:#361919;
+
+    /*Mode Night*/
+    --BackGroundColorBody:#18181b;
+
+    --BackGroundColorHeaderMN:#361919ec;
+    --BorderColorHeaderMN:#804040;
+
+    --BackGroundColorFooterMN:#361919ec;
+    --BorderColorFooterMN:#804040;
+
+    --BorderColorSectionsMN:#804040;
+    --BackgroundColorSectionsMN:#36191994;
+
+    --BorderColorSmallSectionsMN:#ac5656;
+    --BackGroundColorSmallSectionsMN:#361919;
+    --BackGroundColorMediumSectionsMN:rgba(144,69,69,1);
+
+    --BackgroundColorSectionSVGMN:#18181bbb;
+    --BorderColorSectionSVGMN:#804040;
+
+    --ColorFillIconsMN:#361919;
+
+    --TextColorMN:#ffffff;
+}
+
+
+/*ModeNight ChangeIcon*/
+.svg{
+    cursor: pointer;
+    transform: scale(1.5);
+    fill: var(--ColorFillIconsML);
+}
+.svgSun{
+    display: none;
+}
+.svgMoon.changeIcon{
+    display: none;
+}
+.svgSun.changeIcon{
+    display: block;
+}
+
+.body.changeColor{
+    background-color: var(--BackGroundColorBody);
+}
+.h1.changeColor,.p.changeColor,.svg.changeColor{
+    color: #fff;
+    fill: #fff;
+}
+.ContainerHeader.changeColor{
+    background-color: var(--BackGroundColorHeaderMN);
+    border-bottom: 1px solid var(--BorderColorHeaderMN);
+}
+.ContainerAnimation.changeColor{
+    background-color:var(--BackgroundColorSectionsMN);
+}
+.svgpicture.changeColor{
+    background-color: var(--BackgroundColorSectionSVGMN);
+    border: 1px solid var(--BorderColorSectionSVGMN);
+}
+.CopyHTMLCSS.changeColor{
+    background-color: var(--BackGroundColorMediumSectionsMN);
+}
+.HTML.changeColor, .CSS.changeColor{
+    background-color: var(--BackGroundColorSmallSectionsMN);
+}
+.ContainerFooter.changeColor{
+    background-color: var(--BackGroundColorFooterMN);
+    border-top: 1px solid var(--BorderColorFooterMN);
+}
+
+
+
+/*Styles Header*/
+
+.ContainerHeader{
+    width: 100%;
+    background-color:var(--BackGroundColorHeaderML);
+    backdrop-filter: blur(5px);
+    position: sticky; 
+    top: 0; 
+    z-index: 1;
+    margin-bottom: 100px;
+    border-bottom: 1px solid var(--BorderColorHeaderML); 
+}
+.ContentHeader{
+    max-width: 1200px;
+    padding: 1em;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ModeLightNight{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*Section FirstSection*/
+.ContainerFirstSection{
+    width: 100%;
+}
+.ContentFirstSection{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.ContainerAnimation{
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 1px solid var(--BorderColorSectionsML);
+    background-color: var(--BackgroundColorSectionsML);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 50px;
+}
+.svgpicture{
+    display: flex;
+    justify-content: center;
+    background-color: none;
+    border-radius: 20px;
+    background-color: var(--BackgroundColorSectionSVGML);
+    border: 1px solid var(--BorderColorSectionSVGML);
+}
+.svgAnimation{
+    padding: 1.5em;
+    max-width: 400px;
+}
+.ContainerCopy{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1em;
+}
+.ContentCopy{
+    width: 90%;
+    border: 1px solid var(--BorderColorSmallSectionsML);
+    background-color: var(--BackGroundColorMediumSectionsML);
+    border-radius: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1em; 
+    gap: 10px;
+}
+.ContainerCodeHTMLCSS{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+.HTML{
+    height: 20px;
+    padding-top: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    overflow: hidden;
+    border: 1px solid var(--BorderColorSmallSectionsML);
+    background-color:var(--BackGroundColorSmallSectionsML);
+    border-radius: 10px;
+}
+.CSS{
+    height: 20px;
+    padding-top: .5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: .5em;
+    overflow: hidden;
+    border: 1px solid var(--BorderColorSmallSectionsML);
+    background-color:var(--BackGroundColorSmallSectionsML) ;
+    border-radius: 10px;
+}
+.Copy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+}
+.svgCopyHTML{
+    transition: transform 1s;
+}
+.svgCopyHTML:hover{
+    transform: scale(1.7);
+}
+.svgCopyCSS{
+    transition: transform 1s;
+}
+.svgCopyCSS:hover{
+    transform: scale(1.7);
+   
+}
+
+
+/*Styles Footer*/
+
+.ContainerFooter{
+    margin-top: 150px;
+    width: 100%;
+    background-color:var(--BackGroundColorFooterML);
+    border-top: 1px solid var(--BorderColorFooterML);
+}
+
+.ContentFooter{
+    max-width: 1200px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.pLogoFooter{
+    font-weight: 800;
+    font-size: 30px;
+}
+.Footer{
+    width: 400px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
